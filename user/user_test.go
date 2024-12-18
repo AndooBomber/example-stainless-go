@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package examplestainless_test
+package user_test
 
 import (
 	"context"
@@ -8,9 +8,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/example-stainless-go"
+	examplestainless "github.com/stainless-sdks/example-stainless-go"
 	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
 	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/stainless-sdks/example-stainless-go/user"
 )
 
 func TestUserNewWithOptionalParams(t *testing.T) {
@@ -25,8 +26,8 @@ func TestUserNewWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.User.New(context.TODO(), examplestainless.UserNewParams{
-		User: examplestainless.UserParam{
+	_, err := client.User.New(context.TODO(), user.UserNewParams{
+		User: user.UserParam{
 			ID:         examplestainless.F(int64(10)),
 			Email:      examplestainless.F("john@email.com"),
 			FirstName:  examplestainless.F("John"),
@@ -83,8 +84,8 @@ func TestUserUpdateWithOptionalParams(t *testing.T) {
 	err := client.User.Update(
 		context.TODO(),
 		"username",
-		examplestainless.UserUpdateParams{
-			User: examplestainless.UserParam{
+		user.UserUpdateParams{
+			User: user.UserParam{
 				ID:         examplestainless.F(int64(10)),
 				Email:      examplestainless.F("john@email.com"),
 				FirstName:  examplestainless.F("John"),
@@ -139,8 +140,8 @@ func TestUserNewWithList(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.User.NewWithList(context.TODO(), examplestainless.UserNewWithListParams{
-		Items: []examplestainless.UserParam{{
+	_, err := client.User.NewWithList(context.TODO(), user.UserNewWithListParams{
+		Items: []user.UserParam{{
 			ID:         examplestainless.F(int64(10)),
 			Email:      examplestainless.F("john@email.com"),
 			FirstName:  examplestainless.F("John"),
@@ -172,7 +173,7 @@ func TestUserLoginWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.User.Login(context.TODO(), examplestainless.UserLoginParams{
+	_, err := client.User.Login(context.TODO(), user.UserLoginParams{
 		Password: examplestainless.F("password"),
 		Username: examplestainless.F("username"),
 	})

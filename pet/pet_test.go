@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package examplestainless_test
+package pet_test
 
 import (
 	"bytes"
@@ -10,9 +10,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/example-stainless-go"
+	examplestainless "github.com/stainless-sdks/example-stainless-go"
 	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
 	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/stainless-sdks/example-stainless-go/pet"
 )
 
 func TestPetNewWithOptionalParams(t *testing.T) {
@@ -27,17 +28,17 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Pets.New(context.TODO(), examplestainless.PetNewParams{
-		Pet: examplestainless.PetParam{
+	_, err := client.Pets.New(context.TODO(), pet.PetNewParams{
+		Pet: pet.PetParam{
 			Name:      examplestainless.F("doggie"),
 			PhotoURLs: examplestainless.F([]string{"string"}),
 			ID:        examplestainless.F(int64(10)),
-			Category: examplestainless.F(examplestainless.CategoryParam{
+			Category: examplestainless.F(pet.CategoryParam{
 				ID:   examplestainless.F(int64(1)),
 				Name: examplestainless.F("Dogs"),
 			}),
-			Status: examplestainless.F(examplestainless.PetStatusAvailable),
-			Tags: examplestainless.F([]examplestainless.PetTagParam{{
+			Status: examplestainless.F(pet.PetStatusAvailable),
+			Tags: examplestainless.F([]pet.PetTagParam{{
 				ID:   examplestainless.F(int64(0)),
 				Name: examplestainless.F("name"),
 			}}),
@@ -86,17 +87,17 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Pets.Update(context.TODO(), examplestainless.PetUpdateParams{
-		Pet: examplestainless.PetParam{
+	_, err := client.Pets.Update(context.TODO(), pet.PetUpdateParams{
+		Pet: pet.PetParam{
 			Name:      examplestainless.F("doggie"),
 			PhotoURLs: examplestainless.F([]string{"string"}),
 			ID:        examplestainless.F(int64(10)),
-			Category: examplestainless.F(examplestainless.CategoryParam{
+			Category: examplestainless.F(pet.CategoryParam{
 				ID:   examplestainless.F(int64(1)),
 				Name: examplestainless.F("Dogs"),
 			}),
-			Status: examplestainless.F(examplestainless.PetStatusAvailable),
-			Tags: examplestainless.F([]examplestainless.PetTagParam{{
+			Status: examplestainless.F(pet.PetStatusAvailable),
+			Tags: examplestainless.F([]pet.PetTagParam{{
 				ID:   examplestainless.F(int64(0)),
 				Name: examplestainless.F("name"),
 			}}),
@@ -145,8 +146,8 @@ func TestPetFindByStatusWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Pets.FindByStatus(context.TODO(), examplestainless.PetFindByStatusParams{
-		Status: examplestainless.F(examplestainless.PetFindByStatusParamsStatusAvailable),
+	_, err := client.Pets.FindByStatus(context.TODO(), pet.PetFindByStatusParams{
+		Status: examplestainless.F(pet.PetFindByStatusParamsStatusAvailable),
 	})
 	if err != nil {
 		var apierr *examplestainless.Error
@@ -169,7 +170,7 @@ func TestPetFindByTagsWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Pets.FindByTags(context.TODO(), examplestainless.PetFindByTagsParams{
+	_, err := client.Pets.FindByTags(context.TODO(), pet.PetFindByTagsParams{
 		Tags: examplestainless.F([]string{"string"}),
 	})
 	if err != nil {
@@ -196,7 +197,7 @@ func TestPetUpdateByIDWithOptionalParams(t *testing.T) {
 	err := client.Pets.UpdateByID(
 		context.TODO(),
 		int64(0),
-		examplestainless.PetUpdateByIDParams{
+		pet.PetUpdateByIDParams{
 			Name:   examplestainless.F("name"),
 			Status: examplestainless.F("status"),
 		},
@@ -225,7 +226,7 @@ func TestPetUploadImageWithOptionalParams(t *testing.T) {
 	_, err := client.Pets.UploadImage(
 		context.TODO(),
 		int64(0),
-		examplestainless.PetUploadImageParams{
+		pet.PetUploadImageParams{
 			Image:              io.Reader(bytes.NewBuffer([]byte("some file contents"))),
 			AdditionalMetadata: examplestainless.F("additionalMetadata"),
 		},

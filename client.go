@@ -9,6 +9,9 @@ import (
 
 	"github.com/stainless-sdks/example-stainless-go/internal/requestconfig"
 	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/stainless-sdks/example-stainless-go/pet"
+	"github.com/stainless-sdks/example-stainless-go/store"
+	"github.com/stainless-sdks/example-stainless-go/user"
 )
 
 // Client creates a struct with services and top level methods that help with
@@ -16,9 +19,9 @@ import (
 // directly, and instead use the [NewClient] method instead.
 type Client struct {
 	Options []option.RequestOption
-	Pets    *PetService
-	Store   *StoreService
-	User    *UserService
+	Pets    *pet.PetService
+	Store   *store.StoreService
+	User    *user.UserService
 }
 
 // NewClient generates a new client with the default option read from the
@@ -34,9 +37,9 @@ func NewClient(opts ...option.RequestOption) (r *Client) {
 
 	r = &Client{Options: opts}
 
-	r.Pets = NewPetService(opts...)
-	r.Store = NewStoreService(opts...)
-	r.User = NewUserService(opts...)
+	r.Pets = pet.NewPetService(opts...)
+	r.Store = store.NewStoreService(opts...)
+	r.User = user.NewUserService(opts...)
 
 	return
 }
