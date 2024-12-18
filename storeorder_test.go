@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/example-stainless-go"
-	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
-	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go"
+	"github.com/AndooBomber/example-stainless-go/internal/testutil"
+	"github.com/AndooBomber/example-stainless-go/option"
 )
 
 func TestStoreOrderGet(t *testing.T) {

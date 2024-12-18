@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/example-stainless-go"
-	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
-	"github.com/stainless-sdks/example-stainless-go/option"
-	"github.com/stainless-sdks/example-stainless-go/shared"
+	"github.com/AndooBomber/example-stainless-go"
+	"github.com/AndooBomber/example-stainless-go/internal/testutil"
+	"github.com/AndooBomber/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/shared"
 )
 
 func TestUsage(t *testing.T) {

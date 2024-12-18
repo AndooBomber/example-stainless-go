@@ -6,10 +6,10 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/stainless-sdks/example-stainless-go/internal/apijson"
-	"github.com/stainless-sdks/example-stainless-go/internal/requestconfig"
-	"github.com/stainless-sdks/example-stainless-go/option"
-	"github.com/stainless-sdks/example-stainless-go/shared"
+	"github.com/AndooBomber/example-stainless-go/internal/apijson"
+	"github.com/AndooBomber/example-stainless-go/internal/requestconfig"
+	"github.com/AndooBomber/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/shared"
 )
 
 // StoreService contains methods and other services that help with interacting with

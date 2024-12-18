@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/example-stainless-go"
-	"github.com/stainless-sdks/example-stainless-go/internal"
-	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go"
+	"github.com/AndooBomber/example-stainless-go/internal"
+	"github.com/AndooBomber/example-stainless-go/option"
 )
 
 type closureTransport struct {
