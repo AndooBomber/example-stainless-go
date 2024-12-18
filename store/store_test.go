@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-package examplestainless_test
+package store_test
 
 import (
 	"context"
@@ -9,10 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/example-stainless-go"
+	examplestainless "github.com/stainless-sdks/example-stainless-go"
 	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
 	"github.com/stainless-sdks/example-stainless-go/option"
 	"github.com/stainless-sdks/example-stainless-go/shared"
+	"github.com/stainless-sdks/example-stainless-go/store"
 )
 
 func TestStoreNewOrderWithOptionalParams(t *testing.T) {
@@ -27,7 +28,7 @@ func TestStoreNewOrderWithOptionalParams(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Store.NewOrder(context.TODO(), examplestainless.StoreNewOrderParams{
+	_, err := client.Store.NewOrder(context.TODO(), store.StoreNewOrderParams{
 		Order: shared.OrderParam{
 			ID:       examplestainless.F(int64(10)),
 			Complete: examplestainless.F(true),
