@@ -165,6 +165,7 @@ type Pet struct {
 	PhotoURLs []string `json:"photoUrls,required"`
 	ID        int64    `json:"id"`
 	Category  Category `json:"category"`
+	First     string   `json:"first"`
 	// pet status in the store
 	Status PetStatus `json:"status"`
 	Tags   []PetTag  `json:"tags"`
@@ -177,6 +178,7 @@ type petJSON struct {
 	PhotoURLs   apijson.Field
 	ID          apijson.Field
 	Category    apijson.Field
+	First       apijson.Field
 	Status      apijson.Field
 	Tags        apijson.Field
 	raw         string
@@ -235,6 +237,7 @@ type PetParam struct {
 	PhotoURLs param.Field[[]string]      `json:"photoUrls,required"`
 	ID        param.Field[int64]         `json:"id"`
 	Category  param.Field[CategoryParam] `json:"category"`
+	First     param.Field[string]        `json:"first"`
 	// pet status in the store
 	Status param.Field[PetStatus]     `json:"status"`
 	Tags   param.Field[[]PetTagParam] `json:"tags"`
