@@ -8,10 +8,10 @@ import (
 	"os"
 	"testing"
 
-	examplestainless "github.com/stainless-sdks/example-stainless-go"
-	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
-	"github.com/stainless-sdks/example-stainless-go/option"
-	"github.com/stainless-sdks/example-stainless-go/user"
+	examplestainless "github.com/AndooBomber/example-stainless-go"
+	"github.com/AndooBomber/example-stainless-go/internal/testutil"
+	"github.com/AndooBomber/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/user"
 )
 
 func TestUserNewWithOptionalParams(t *testing.T) {
