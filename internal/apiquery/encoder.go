@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/stainless-sdks/example-stainless-go/internal/param"
+	"github.com/AndooBomber/example-stainless-go/internal/param"
 )
 
 var encoders sync.Map // map[reflect.Type]encoderFunc

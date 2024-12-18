@@ -11,12 +11,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/stainless-sdks/example-stainless-go/internal/apiform"
-	"github.com/stainless-sdks/example-stainless-go/internal/apijson"
-	"github.com/stainless-sdks/example-stainless-go/internal/apiquery"
-	"github.com/stainless-sdks/example-stainless-go/internal/param"
-	"github.com/stainless-sdks/example-stainless-go/internal/requestconfig"
-	"github.com/stainless-sdks/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/internal/apiform"
+	"github.com/AndooBomber/example-stainless-go/internal/apijson"
+	"github.com/AndooBomber/example-stainless-go/internal/apiquery"
+	"github.com/AndooBomber/example-stainless-go/internal/param"
+	"github.com/AndooBomber/example-stainless-go/internal/requestconfig"
+	"github.com/AndooBomber/example-stainless-go/option"
 )
 
 // PetService contains methods and other services that help with interacting with
