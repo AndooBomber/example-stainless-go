@@ -11,7 +11,6 @@ import (
 
 type Order struct {
 	ID       int64     `json:"id"`
-	Amount   int64     `json:"amount"`
 	Complete bool      `json:"complete"`
 	PetID    int64     `json:"petId"`
 	Quantity int64     `json:"quantity"`
@@ -24,7 +23,6 @@ type Order struct {
 // orderJSON contains the JSON metadata for the struct [Order]
 type orderJSON struct {
 	ID          apijson.Field
-	Amount      apijson.Field
 	Complete    apijson.Field
 	PetID       apijson.Field
 	Quantity    apijson.Field
@@ -61,7 +59,6 @@ func (r OrderStatus) IsKnown() bool {
 
 type OrderParam struct {
 	ID       param.Field[int64]     `json:"id"`
-	Amount   param.Field[int64]     `json:"amount"`
 	Complete param.Field[bool]      `json:"complete"`
 	PetID    param.Field[int64]     `json:"petId"`
 	Quantity param.Field[int64]     `json:"quantity"`
