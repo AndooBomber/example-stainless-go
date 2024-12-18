@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/example-stainless-go
+module github.com/AndooBomber/example-stainless-go
 
 go 1.21
 
