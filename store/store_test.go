@@ -31,6 +31,7 @@ func TestStoreNewOrderWithOptionalParams(t *testing.T) {
 	_, err := client.Store.NewOrder(context.TODO(), store.StoreNewOrderParams{
 		Order: shared.OrderParam{
 			ID:       examplestainless.F(int64(10)),
+			Amount:   examplestainless.F(int64(100)),
 			Complete: examplestainless.F(true),
 			PetID:    examplestainless.F(int64(198772)),
 			Quantity: examplestainless.F(int64(7)),
