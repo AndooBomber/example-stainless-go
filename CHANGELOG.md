@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2024-12-18)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/AndooBomber/example-stainless-go/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **api:** update via SDK Studio ([#10](https://github.com/AndooBomber/example-stainless-go/issues/10)) ([166ca74](https://github.com/AndooBomber/example-stainless-go/commit/166ca74be16285a881d4ff19cc671bfa4d6559b3))
+* **api:** update via SDK Studio ([#12](https://github.com/AndooBomber/example-stainless-go/issues/12)) ([a30e810](https://github.com/AndooBomber/example-stainless-go/commit/a30e810c07b884e3e0bf668ed8bbfafafd4ca6e0))
+
 ## 0.1.0-alpha.2 (2024-12-18)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/AndooBomber/example-stainless-go/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
