@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	examplestainless "github.com/stainless-sdks/example-stainless-go"
-	"github.com/stainless-sdks/example-stainless-go/internal/testutil"
-	"github.com/stainless-sdks/example-stainless-go/option"
-	"github.com/stainless-sdks/example-stainless-go/shared"
-	"github.com/stainless-sdks/example-stainless-go/store"
+	examplestainless "github.com/AndooBomber/example-stainless-go"
+	"github.com/AndooBomber/example-stainless-go/internal/testutil"
+	"github.com/AndooBomber/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/shared"
+	"github.com/AndooBomber/example-stainless-go/store"
 )
 
 func TestStoreNewOrderWithOptionalParams(t *testing.T) {

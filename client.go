@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/stainless-sdks/example-stainless-go/internal/requestconfig"
-	"github.com/stainless-sdks/example-stainless-go/option"
-	"github.com/stainless-sdks/example-stainless-go/pet"
-	"github.com/stainless-sdks/example-stainless-go/store"
-	"github.com/stainless-sdks/example-stainless-go/user"
+	"github.com/AndooBomber/example-stainless-go/internal/requestconfig"
+	"github.com/AndooBomber/example-stainless-go/option"
+	"github.com/AndooBomber/example-stainless-go/pet"
+	"github.com/AndooBomber/example-stainless-go/store"
+	"github.com/AndooBomber/example-stainless-go/user"
 )
 
 // Client creates a struct with services and top level methods that help with

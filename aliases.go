@@ -3,8 +3,8 @@
 package examplestainless
 
 import (
-	"github.com/stainless-sdks/example-stainless-go/internal/apierror"
-	"github.com/stainless-sdks/example-stainless-go/shared"
+	"github.com/AndooBomber/example-stainless-go/internal/apierror"
+	"github.com/AndooBomber/example-stainless-go/shared"
 )
 
 type Error = apierror.Error

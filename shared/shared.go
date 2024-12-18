@@ -5,8 +5,8 @@ package shared
 import (
 	"time"
 
-	"github.com/stainless-sdks/example-stainless-go/internal/apijson"
-	"github.com/stainless-sdks/example-stainless-go/internal/param"
+	"github.com/AndooBomber/example-stainless-go/internal/apijson"
+	"github.com/AndooBomber/example-stainless-go/internal/param"
 )
 
 type Order struct {
