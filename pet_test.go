@@ -36,6 +36,7 @@ func TestPetNewWithOptionalParams(t *testing.T) {
 				ID:   examplestainless.F(int64(1)),
 				Name: examplestainless.F("Dogs"),
 			}),
+			First:  examplestainless.F("dogger"),
 			Status: examplestainless.F(examplestainless.PetStatusAvailable),
 			Tags: examplestainless.F([]examplestainless.PetTagParam{{
 				ID:   examplestainless.F(int64(0)),
@@ -95,6 +96,7 @@ func TestPetUpdateWithOptionalParams(t *testing.T) {
 				ID:   examplestainless.F(int64(1)),
 				Name: examplestainless.F("Dogs"),
 			}),
+			First:  examplestainless.F("dogger"),
 			Status: examplestainless.F(examplestainless.PetStatusAvailable),
 			Tags: examplestainless.F([]examplestainless.PetTagParam{{
 				ID:   examplestainless.F(int64(0)),
