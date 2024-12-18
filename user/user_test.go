@@ -29,6 +29,7 @@ func TestUserNewWithOptionalParams(t *testing.T) {
 	_, err := client.User.New(context.TODO(), user.UserNewParams{
 		User: user.UserParam{
 			ID:         examplestainless.F(int64(10)),
+			Age:        examplestainless.F(int64(20)),
 			Email:      examplestainless.F("john@email.com"),
 			FirstName:  examplestainless.F("John"),
 			LastName:   examplestainless.F("James"),
@@ -87,6 +88,7 @@ func TestUserUpdateWithOptionalParams(t *testing.T) {
 		user.UserUpdateParams{
 			User: user.UserParam{
 				ID:         examplestainless.F(int64(10)),
+				Age:        examplestainless.F(int64(20)),
 				Email:      examplestainless.F("john@email.com"),
 				FirstName:  examplestainless.F("John"),
 				LastName:   examplestainless.F("James"),
@@ -143,6 +145,7 @@ func TestUserNewWithList(t *testing.T) {
 	_, err := client.User.NewWithList(context.TODO(), user.UserNewWithListParams{
 		Items: []user.UserParam{{
 			ID:         examplestainless.F(int64(10)),
+			Age:        examplestainless.F(int64(20)),
 			Email:      examplestainless.F("john@email.com"),
 			FirstName:  examplestainless.F("John"),
 			LastName:   examplestainless.F("James"),

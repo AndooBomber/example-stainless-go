@@ -108,6 +108,7 @@ func (r *UserService) Logout(ctx context.Context, opts ...option.RequestOption) 
 
 type User struct {
 	ID        int64  `json:"id"`
+	Age       int64  `json:"age"`
 	Email     string `json:"email"`
 	FirstName string `json:"firstName"`
 	LastName  string `json:"lastName"`
@@ -122,6 +123,7 @@ type User struct {
 // userJSON contains the JSON metadata for the struct [User]
 type userJSON struct {
 	ID          apijson.Field
+	Age         apijson.Field
 	Email       apijson.Field
 	FirstName   apijson.Field
 	LastName    apijson.Field
@@ -143,6 +145,7 @@ func (r userJSON) RawJSON() string {
 
 type UserParam struct {
 	ID        param.Field[int64]  `json:"id"`
+	Age       param.Field[int64]  `json:"age"`
 	Email     param.Field[string] `json:"email"`
 	FirstName param.Field[string] `json:"firstName"`
 	LastName  param.Field[string] `json:"lastName"`
