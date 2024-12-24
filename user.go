@@ -111,6 +111,7 @@ type User struct {
 	Age       int64  `json:"age"`
 	Email     string `json:"email"`
 	FirstName string `json:"firstName"`
+	FullName  string `json:"fullName"`
 	LastName  string `json:"lastName"`
 	Password  string `json:"password"`
 	Phone     string `json:"phone"`
@@ -126,6 +127,7 @@ type userJSON struct {
 	Age         apijson.Field
 	Email       apijson.Field
 	FirstName   apijson.Field
+	FullName    apijson.Field
 	LastName    apijson.Field
 	Password    apijson.Field
 	Phone       apijson.Field
@@ -148,6 +150,7 @@ type UserParam struct {
 	Age       param.Field[int64]  `json:"age"`
 	Email     param.Field[string] `json:"email"`
 	FirstName param.Field[string] `json:"firstName"`
+	FullName  param.Field[string] `json:"fullName"`
 	LastName  param.Field[string] `json:"lastName"`
 	Password  param.Field[string] `json:"password"`
 	Phone     param.Field[string] `json:"phone"`
