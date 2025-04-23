@@ -10,7 +10,6 @@ import (
 	examplestainless "github.com/AndooBomber/example-stainless-go"
 	"github.com/AndooBomber/example-stainless-go/internal/testutil"
 	"github.com/AndooBomber/example-stainless-go/option"
-	"github.com/AndooBomber/example-stainless-go/shared"
 	"github.com/AndooBomber/example-stainless-go/store"
 )
 
@@ -26,11 +25,10 @@ func TestUsage(t *testing.T) {
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	order, err := client.Store.NewOrder(context.TODO(), store.StoreNewOrderParams{
-		Order: shared.OrderParam{},
-	})
+	order, err := client.Store.NewOrder(context.TODO(), store.StoreNewOrderParams{})
 	if err != nil {
 		t.Error(err)
+		return
 	}
 	t.Logf("%+v\n", order.ID)
 }
