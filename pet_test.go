@@ -228,8 +228,8 @@ func TestPetUploadImageWithOptionalParams(t *testing.T) {
 		context.TODO(),
 		int64(0),
 		examplestainless.PetUploadImageParams{
-			Image:              io.Reader(bytes.NewBuffer([]byte("some file contents"))),
 			AdditionalMetadata: examplestainless.F("additionalMetadata"),
+			Image:              io.Reader(bytes.NewBuffer([]byte("some file contents"))),
 		},
 	)
 	if err != nil {

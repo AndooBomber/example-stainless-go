@@ -34,7 +34,7 @@ func TestStoreNewOrderWithOptionalParams(t *testing.T) {
 			PetID:    examplestainless.F(int64(198772)),
 			Quantity: examplestainless.F(int64(7)),
 			ShipDate: examplestainless.F(time.Now()),
-			Status:   examplestainless.F(shared.OrderStatusPlaced),
+			Status:   examplestainless.F(shared.OrderStatusApproved),
 		},
 	})
 	if err != nil {

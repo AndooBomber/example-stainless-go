@@ -331,9 +331,9 @@ func (r PetUpdateByIDParams) URLQuery() (v url.Values) {
 }
 
 type PetUploadImageParams struct {
-	Image io.Reader `json:"image,required" format:"binary"`
 	// Additional Metadata
 	AdditionalMetadata param.Field[string] `query:"additionalMetadata"`
+	Image              io.Reader           `json:"image" format:"binary"`
 }
 
 func (r PetUploadImageParams) MarshalMultipart() (data []byte, contentType string, err error) {
