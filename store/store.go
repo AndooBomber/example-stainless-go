@@ -52,7 +52,7 @@ func (r *StoreService) Inventory(ctx context.Context, opts ...option.RequestOpti
 type StoreInventoryResponse map[string]int64
 
 type StoreNewOrderParams struct {
-	Order shared.OrderParam `json:"order,required"`
+	Order shared.OrderParam `json:"order"`
 }
 
 func (r StoreNewOrderParams) MarshalJSON() (data []byte, err error) {

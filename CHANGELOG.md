@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.0-alpha.5 (2025-04-24)
+
+Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/AndooBomber/example-stainless-go/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
+
+### Features
+
+* **api:** update via SDK Studio ([adae09a](https://github.com/AndooBomber/example-stainless-go/commit/adae09a30b7b0499121ef3a765d490b933a34a42))
+
+
+### Chores
+
+* **ci:** only use depot for staging repos ([263cc41](https://github.com/AndooBomber/example-stainless-go/commit/263cc41e4832249d84436b8be837c435d739fe0f))
+* **internal:** codegen related update ([1b263ae](https://github.com/AndooBomber/example-stainless-go/commit/1b263aea8e5f4b2fe1f49830e2992f351b943329))
+* **internal:** codegen related update ([8bbcc68](https://github.com/AndooBomber/example-stainless-go/commit/8bbcc689da91c38b40ecd24871b338a4c35a244b))
+* **internal:** codegen related update ([e03ad1a](https://github.com/AndooBomber/example-stainless-go/commit/e03ad1a27941233072a3d58e4570acc3054ee29c))
+* **internal:** codegen related update ([0417d12](https://github.com/AndooBomber/example-stainless-go/commit/0417d12ad066c58cb5824dcce429ca20cbad8008))
+* **internal:** codegen related update ([9866fec](https://github.com/AndooBomber/example-stainless-go/commit/9866fec0375c667cb69b2fd135140ea3adc09172))
+* **internal:** codegen related update ([b0e2dbb](https://github.com/AndooBomber/example-stainless-go/commit/b0e2dbb49eeadd53fde640f78f0f050673e0f90b))
+
 ## 0.1.0-alpha.4 (2024-12-24)
 
 Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/AndooBomber/example-stainless-go/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)

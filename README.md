@@ -2,10 +2,10 @@
 
 <a href="https://pkg.go.dev/github.com/AndooBomber/example-stainless-go"><img src="https://pkg.go.dev/badge/github.com/AndooBomber/example-stainless-go.svg" alt="Go Reference"></a>
 
-The Petstore Go library provides convenient access to [the Petstore REST
-API](https://app.stainlessapi.com/docs) from applications written in Go. The full API of this library can be found in [api.md](api.md).
+The Petstore Go library provides convenient access to the [Petstore REST API](https://app.stainlessapi.com/docs)
+from applications written in Go.
 
-It is generated with [Stainless](https://www.stainlessapi.com/).
+It is generated with [Stainless](https://www.stainless.com/).
 
 ## Installation
 
@@ -24,7 +24,7 @@ Or to pin the version:
 <!-- x-release-please-start-version -->
 
 ```sh
-go get -u 'github.com/AndooBomber/example-stainless-go@v0.1.0-alpha.4'
+go get -u 'github.com/AndooBomber/example-stainless-go@v0.1.0-alpha.5'
 ```
 
 <!-- x-release-please-end -->
@@ -46,16 +46,13 @@ import (
 
 	"github.com/AndooBomber/example-stainless-go"
 	"github.com/AndooBomber/example-stainless-go/option"
-	"github.com/AndooBomber/example-stainless-go/shared"
 )
 
 func main() {
 	client := examplestainless.NewClient(
 		option.WithAPIKey("My API Key"), // defaults to os.LookupEnv("PETSTORE_API_KEY")
 	)
-	order, err := client.Store.NewOrder(context.TODO(), examplestainless.StoreNewOrderParams{
-		Order: shared.OrderParam{},
-	})
+	order, err := client.Store.NewOrder(context.TODO(), examplestainless.StoreNewOrderParams{})
 	if err != nil {
 		panic(err.Error())
 	}
@@ -240,6 +237,24 @@ client := examplestainless.NewClient(
 client.Store.Inventory(context.TODO(), option.WithMaxRetries(5))
 ```
 
+### Accessing raw response data (e.g. response headers)
+
+You can access the raw HTTP response data by using the `option.WithResponseInto()` request option. This is useful when
+you need to examine response headers, status codes, or other details.
+
+```go
+// Create a variable to store the HTTP response
+var response *http.Response
+response, err := client.Store.Inventory(context.TODO(), option.WithResponseInto(&response))
+if err != nil {
+	// handle error
+}
+fmt.Printf("%+v\n", response)
+
+fmt.Printf("Status Code: %d\n", response.StatusCode)
+fmt.Printf("Headers: %+#v\n", response.Header)
+```
+
 ### Making custom/undocumented requests
 
 This library is typed for convenient access to the documented API. If you need to access undocumented
@@ -330,7 +345,7 @@ middleware has been applied.
 
 This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
 
-1. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals)_.
+1. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals.)_
 2. Changes that we do not expect to impact the vast majority of users in practice.
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
